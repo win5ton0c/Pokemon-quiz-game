@@ -160,13 +160,27 @@ function displayResult(result){
 
 // hide loading
 function hideLoadingWindow(){
-    loadingContainer.classList.add('hide')
+    loadingContainer.classList.add('hide');
 }
 
 // show loading
 
 function showLoadingWindow(){
-    loadingContainer.classList.add('hide')
-    loadingContainer.classList.add('show')
+    mainContainer[0].classList.remove('show');
+    loadingContainer.classList.remove('hide');
+    loadingContainer.classList.add('show');
 
+}
+
+// show puzzle window
+
+function showPuzzleWindow(){
+    loadingContainer.classList.remove('show');
+    mainContainer[0].classList.remove('hide');
+    mainContainer[0].classList.add('show');
+}
+
+// hide Puzzle window
+function hidePuzzleWindow(){
+    mainContainer[0].classList.add('hide');
 }
